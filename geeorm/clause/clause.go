@@ -9,6 +9,7 @@ type Clause struct {
 
 type Type int
 
+// Support types for Clause
 const (
 	INSERT Type = iota
 	VALUES
@@ -16,6 +17,9 @@ const (
 	LIMIT
 	WHERE
 	ORDERBY
+	UPDATE
+	DELETE
+	COUNT
 )
 
 func (c *Clause) Set(name Type, vars ...interface{}) {
